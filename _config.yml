@@ -1,5 +1,4 @@
 title: lumeh.org blog
-
 defaults:
   - scope:
       path: ""
