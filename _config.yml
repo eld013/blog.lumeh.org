@@ -1,0 +1,7 @@
+title: lumeh.org blog
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: lumeh

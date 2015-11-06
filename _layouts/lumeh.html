@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description | strip_newlines }}">
+  <link rel="stylesheet" href="//lumeh.org/css/lumeh.css">
+  <link rel="stylesheet" href="//lumeh.org/css/print.css">
+  <link rel="stylesheet" href="//lumeh.org/css/code.css">
+  <link rel="icon" href="//lumeh.org/image/favicon.ico">
+</head>
+<body>
+  <header>
+    <h1><span style="font-family: 'DejaVu Sans Mono'">l</span>umeh.org</h1>
+  </header>
+  <nav>
+    <p id="welcome">&nbsp;</p>
+    <ul id="navigation-menu">
+      <a href="/">index</a>
+    </ul>
+  </nav>
+  <section id="content">
+
+{{ content }}
+
+  </section>
+  <section class="new-comment">
+    <p><a href="https://github.com/kalgynirae/blog/edit/gh-pages/{{ page.path }}">Add a comment</a></p>
+  </section>
+{% for comment in page.comments %}
+  <section class="comment">
+{{ comment }}
+  </section>
+{% endfor %}
+  <footer>
+    <p>
+      <span id="source">{{ site.title }}</span>
+      | Copyright 2007–2014 Colin Chan
+      | Contact: <img class=inline src="//lumeh.org/image/admin-email.png" alt="[admin email]">
+    </p>
+  </footer>
+</body>
+</html>
