@@ -16,22 +16,36 @@
   <nav>
     <p id="welcome">&nbsp;</p>
     <ul id="navigation-menu">
-      <a href="/">index</a>
+      <li><a href="/">index</a></li><!--
+      --><li><a href="/">blog</a></li><!--
+      --><li><a href="//lumeh.org/music.html">music</a></li><!--
+      --><li><a href="//lumeh.org/projects/">projects</a></li><!--
+      --><li><a href="//lumeh.org/recipes/">recipes</a></li><!--
+      --><li><a href="//lumeh.org/tools/">tools</a></li><!--
+      --><li><a href="//lumeh.org/wiki/">wiki</a></li><!--
+      --><li><a href="//lumeh.org/cafe/">café</a></li>
     </ul>
   </nav>
-  <section id="content">
+  <article>
 
 {{ content }}
 
-  </section>
-  <section class="new-comment">
-    <p><a href="https://github.com/kalgynirae/blog/edit/gh-pages/{{ page.path }}">Add a comment</a></p>
-  </section>
+    <section id="comments">
+      <header>
+        <p>
+          <strong>Comments</strong> —
+          <a href="https://github.com/kalgynirae/blog/edit/gh-pages/{{ page.path }}">Add a comment</a>
+        </p>
+      </header>
 {% for comment in page.comments %}
-  <section class="comment">
+      <article>
+
 {{ comment }}
-  </section>
+
+      </article>
 {% endfor %}
+    </section>
+  </article>
   <footer>
     <p>
       <span id="source">{{ site.title }}</span>
