@@ -27,6 +27,11 @@
     </ul>
   </nav>
   <article>
+    <header>
+      <h1 class="title">{{ page.title }}</h1>
+      <span class="author">by {{ page.author }}</span>
+      <span class="date">on {{ page.date }}</span>
+    </header>
 
 {{ content }}
 
@@ -39,8 +44,11 @@
       </header>
 {% for comment in page.comments %}
       <article>
+        <header>
+          <h3>Comment by <span class="author">{{ comment.name }}</span></h3>
+        </header>
 
-{{ comment }}
+{{ comment.content }}
 
       </article>
 {% endfor %}
